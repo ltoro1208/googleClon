@@ -1,0 +1,30 @@
+html{
+    background-color: #202124;
+    font-family: Arial, sans-serif;
+    color: whitesmoke;
+    margin: 0;
+}
+
+.header-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+.header-menu div{
+    padding: 10px;
+    padding-top: 5px;
+}
+.icon-menu img{
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.profile-photo img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
