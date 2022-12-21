@@ -8,6 +8,7 @@ body{
     --black: #202124;
     --gray: #303134;
     --white: #e2e2e3;
+    --font-footer: #999da2;
     --gray-border: #5f6368;
     --black-footer:#171717;
     --sm: 13px;
@@ -18,7 +19,7 @@ body{
     display: grid;
     grid-template-rows: 1fr 1fr;
     background-color: var(--black-footer);
-    color: var(--white);
+    color: var(--font-footer);
     width: 100%;
     position: absolute;
     bottom: 0px;
@@ -43,8 +44,9 @@ body{
     }
    .footer-bottom-left a{
         text-decoration: none;
-        color: var(--white);
         padding: 15px 15px;
+        color: var(--font-footer);
+        font-size: var(--md);
     
     }
     .footer-bottom-rigth{
@@ -53,9 +55,10 @@ body{
         align-items: center;
     }
         .footer-bottom-rigth a{
-            color: var(--white);
             margin-right: 50px;
             text-decoration: none;
+            font-size: var(--md);
+            color: var(--font-footer);
         }
         .footer-bottom-rigth a:hover, .footer-bottom-left a:hover{
             text-decoration: underline 1px solid;

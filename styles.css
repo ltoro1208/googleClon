@@ -1,207 +1,233 @@
+/*---GENERAL STYLES----------------------------------------------*/
 html{
     background-color: #202124;
     font-family: Arial, sans-serif;
+    margin: 0;
     box-sizing: border-box;
 }
 body{
-    margin: 0;
-    padding: 0;
     --black: #202124;
     --gray: #303134;
-    --white: whitesmoke;
-    --black-footer: #171717;
-    --border-search-menu: #5f6368;
+    --white: #e2e2e3;
+    --font-footer: #999da2;
+    --gray-border: #5f6368;
+    --black-footer:#171717;
+    --backg-pref-menu: #202124;
     --sm: 13px;
     --md: 14px;
     --lg: 15px;
 }
-/*Header Styles----------------------------------*/
-header{
-    width: 100%;
-    height: 60px;
-    font-size: var(--sm);
-}
+/*---HEADER--------------------------------------------------------*/
 .header-menu{
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 48px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    gap: 12px;
+    margin-top: 0;
+    padding-bottom: 6px;
 }
-    .header-menu div, a{
-        padding: 5px;
-    }
-    .header-menu div > a{
+    .header-menu a{
         text-decoration: none;
         color: var(--white);
-
+        font-size: var(--sm);
+        padding-left: 12px;
     }
-    .header-menu div > img{
-        cursor: pointer;
-
+    .header-menu a:hover{
+        text-decoration:underline 1px solid;
     }
-
-.icon-menu{
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-}
-    .icon-menu img{
-    width: 20px;
-    height: 20px;
+    .header-menu span{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
     }
-    .icon-menu :hover{
-        background-color: var(--border-search-menu);
+        .header-menu span:hover{
+            border-radius: 50%;
+            background-color: var(--gray);
+        }
+    .header-menu .icon-menu{
+        background-image: url('./images/menu.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 24px;
+        height: 24px;
+        padding: 0;
     }
-
-.profile-photo img{
-    width: 32px;
-    height: 32px;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-/*Main Styles------------------------------------*/
+    .header-menu .profile-photo{
+        background-image: url('./images/profile-photo.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        padding: 0;
+    }
+/*---MAIN-----------------------------------------------------------*/
 .main-container{
-    font-size: var(--md);
     display: grid;
-    grid-template-rows: 3fr 1fr 1fr 3fr;
-    align-items: center;
+    grid-template-rows: 3fr 1fr 1fr;
     justify-content: center;
-    margin-top: 20px;
-    width: 100%;
+    gap: 18px;
 }
-.google-image{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-}
-    .google-image img{
-        border-radius: 24px;
+    .main-container .google-image{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        border-radius: 5px;
     }
+        .main-container .google-image img{
+            width: 500px;
+            height: 200px;
+        }
+
 .search-menu{
-    width: 530px;
-    margin-top: 20px;
-    border: 1px solid var(--border-search-menu);
-    border-radius: 30px;
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
+    width: 580px;
+    height: 40px;
+    border: 1px solid var(--gray);
+    border-radius: 20px;
+    gap: 5px;
 }
+    .search-menu .search-icon{
+        width: 20px;
+        height: 20px;
+    }
+    .search-menu input{
+        height: 38px;
+        width: 85%;
+        color: var(--white);
+        font-size: var(--md);
+        border-style: none;
+        outline: none;
+        background-color: var(--black);
+    }
+    .search-menu .micro-icon{
+        width: 24px;
+        height: 24px;
+    }
     .search-menu:hover, .search-menu input:hover{
         background-color: var(--gray);
     }
-    .search-menu input{
-        display: flex;
-        align-items: center;
-        width: 525px;
-        margin-left: 12px;
-        border:none;
-        outline: none;
-        background-color: var(--black);
-        color: var(--white);
-    }
-    .search-menu .search-icon{
-        background-image: url(./images/search-icon.png);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        width: 20px;
-        height: 20px;
-        margin-left: 12px;
-        cursor: pointer;
-        margin-top: 5px;
-    }
-    .search-menu .micro-icon{
-        background-image: url('./images/other-icons.png');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        width: 30px;
-        height: 30px;
-        margin-right: 12px;
-        cursor: pointer;
+    /*!!!---Falta un evento JS, que cuando el usuario active el input, cambie la totalidad del background-color del input---!!!*/
+    .search-menu:focus, .search-menu input:focus{
+        background-color: var(--gray);
     }
 .button-menu{
     display: flex;
     justify-content: center;
-    width: 100%;
+    gap: 12px
+
 }
     .button-menu button{
-        width: auto;
+        width: 150px;
         height: 36px;
-        background-color: var(--gray);
         color: var(--white);
-        border: none;
-        margin-top: 24px;
+        border: 0;
         border-radius: 5px;
-        font-size: var(--md);
-        padding: 0 15px;
+        background-color: var(--gray);
     }
-    .button-menu button:hover{
-        border: 1px solid var(--border-search-menu);
-    }
-    .button-menu :first-child{
-        margin-right: 14px;
-    }
-
-/*Footer Styles------------------------------*/
+        .button-menu button:hover{
+            border: 1px solid var(--gray-border);
+        }
+/*---FOOTER-------------------------------------------------------------------*/
 .footer{
     display: grid;
-    grid-template-columns: 100%;
     grid-template-rows: 1fr 1fr;
     background-color: var(--black-footer);
-    color: var(--white);
-    align-content: flex-end;
+    color: var(--font-footer);
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    padding: 0;
 }
 .footer-top{
     display: flex;
-    height: 40px;
     align-items: center;
-    border-bottom: 1px solid var(--gray);
-    margin-left: 40px;
-    font-size: var(--lg);
+    justify-content: flex-start;
+    border-bottom: 1px solid var(--gray-border);
+    padding: 15px 30px;
 }
-
-
 .footer-bottom{
     display: grid;
-    grid-template-columns: 70% 30%;
-    height: 40px;
-    font-size: var(--md);
+    grid-template-columns: 1fr 1fr;
+    height: 46px;
 }
     .footer-bottom-left{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        height: 40px;
-        justify-content: flex-start;
+        display: flex;  
         align-items: center;
-
-        
+        padding-left: 15px;
     }
-        .footer-bottom-left ul{
-        list-style: none;
-        }
-        .footer-bottom-left ul li{
-            margin-right: 14px;
-            align-items: center;
-            justify-content: flex-start;
-        }
-
+   .footer-bottom-left a{
+        text-decoration: none;
+        padding: 15px 15px;
+        color: var(--font-footer);
+        font-size: var(--md);
+    
+    }
     .footer-bottom-rigth{
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        width: auto;
-        height: 40px;
     }
-        .footer-bottom-rigth a{
-            color: var(--white);
-            margin-right: 25px;
+        .footer-bottom-rigth a, .footer-bottom-rigth div{
+            margin-right: 50px;
             text-decoration: none;
+            font-size: var(--md);
+            color: var(--font-footer);
         }
+        .footer-bottom-rigth a:hover, .footer-bottom-left a:hover, .footer-bottom-rigth div:hover{
+            text-decoration: underline 1px solid;
+            cursor: pointer;
+        }
+/*---PREFERENCE MENU-------------------------------------------------------*/
+.preference-menu{
+    width: auto;
+    height: auto;
+    color: var(--font-footer);
+    position: absolute;
+    bottom: 40px;
+    right: 10px;
+    border-radius: 0px 0px 5px 5px;
+    background-color: var(--backg-pref-menu);
+    box-shadow: 0px 0px 10px 2px var(--black-footer);
+    padding: 5px 0px;
+}
+    .preference-menu .preference-top-menu{
+        border-bottom: 1px solid var(--gray-border);
+    }
+    .preference-menu .preference-top-menu div{
+        width: 170px;
+        height: auto;
+        font-size: var(--sm);
+        padding: 0px 16px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+    .preference-menu .preference-top-menu div:hover{
+        background-color: var(--gray);
+    }
+.preference-menu .preference-bottom-menu div{
+    width: 170px;
+    height: auto;
+    font-size: var(--sm);
+    padding: 0px 16px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+    .preference-menu .preference-bottom-menu div:hover{
+        background-color: var(--gray);
+    }
+
+/*---OPEN & CLOSE preference menu--------------------------------*/
+.inactive{
+    display: none;
+}
