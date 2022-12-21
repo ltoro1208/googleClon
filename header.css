@@ -1,30 +1,64 @@
 html{
-    background-color: #202124;
-    font-family: Arial, sans-serif;
-    color: whitesmoke;
     margin: 0;
+    padding: 0;
 }
-
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--black);
+    --black: #202124;
+    --gray: #303134;
+    --white: #ffffff;
+    --sm: 13px;
+    --md: 14px;
+    --lg: 15px;
+}
 .header-menu{
+    width: 100%;
+    height: 48px;
     display: flex;
-    flex-direction: row;
     justify-content: flex-end;
     align-items: center;
+    gap: 12px;
+    margin-top: 0;
+    padding-bottom: 6px;
 }
-.header-menu div{
-    padding: 10px;
-    padding-top: 5px;
-}
-.icon-menu img{
-    align-items: center;
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-}
-
-.profile-photo img{
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-    border-radius: 50%;
-}
+    .header-menu a{
+        text-decoration: none;
+        color: var(--white);
+        font-size: var(--sm);
+        padding-left: 12px;
+    }
+    .header-menu a:hover{
+        text-decoration:underline 1px solid;
+    }
+    .header-menu span{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+    }
+        .header-menu span:hover{
+            border-radius: 50%;
+            background-color: var(--gray);
+        }
+    .header-menu .icon-menu{
+        background-image: url('./images/menu.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 24px;
+        height: 24px;
+        padding: 0;
+    }
+    .header-menu .profile-photo{
+        background-image: url('./images/profile-photo.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        padding: 0;
+    }

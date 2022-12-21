@@ -1,68 +1,84 @@
 html{
     background-color: #202124;
     font-family: Arial, sans-serif;
-    color: whitesmoke;
     margin: 0;
     box-sizing: border-box;
 }
 body{
     --black: #202124;
     --gray: #303134;
-    --white: whitesmoke;
+    --white: #e2e2e3;
+    --sm: 13px;
+    --md: 14px;
+    --lg: 15px;
+    --gray-border: #5f6368;
 }
 .main-container{
     display: grid;
-
-    grid-template-rows: 3fr 1fr 1fr 3fr;
-    align-items: center;
+    grid-template-rows: 3fr 1fr 1fr;
     justify-content: center;
-    margin-top: 20px;
-    width: 100%;
+    gap: 18px;
 }
-.google-image{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-}
-    .google-image img{
-        border-radius: 24px;
+    .main-container .google-image{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        border-radius: 5px;
     }
+        .main-container .google-image img{
+            width: 500px;
+            height: 200px;
+        }
+
 .search-menu{
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    align-content: stretch;
-    border: 1px solid var(--white);
-    border-radius: 30px;
-    padding: 5px;
-    margin-top: 20px ;
-    width: 582px;
+    align-items: center;
+    width: 580px;
+    height: 40px;
+    border: 1px solid var(--gray);
+    border-radius: 20px;
+    gap: 5px;
 }
-    .search-menu input{
-        width: 443px;
-        border:none;
-        background-color: var(--black);
-        color: var(--white);
+    .search-menu .search-icon{
+        width: 20px;
+        height: 20px;
     }
-    .search-menu img{
-        object-fit: cover;
+    .search-menu input{
+        height: 38px;
+        width: 85%;
+        color: var(--white);
+        font-size: var(--md);
+        border-style: none;
+        outline: none;
+        background-color: var(--black);
+    }
+    .search-menu .micro-icon{
+        width: 24px;
+        height: 24px;
+    }
+    .search-menu:hover, .search-menu input:hover{
+        background-color: var(--gray);
+    }
+    /*!!!---Falta un evento JS, que cuando el usuario active el input, cambie la totalidad del background-color del input---!!!*/
+    .search-menu:focus, .search-menu input:focus{
+        background-color: var(--gray);
     }
 .button-menu{
     display: flex;
     justify-content: center;
-    width: 100%;
+    gap: 12px
+
 }
     .button-menu button{
         width: 150px;
         height: 36px;
-        background-color: var(--gray);
         color: var(--white);
-        border: none;
-        margin-top: 24px;
+        border: 0;
         border-radius: 5px;
+        background-color: var(--gray);
     }
-    .button-menu :first-child{
-        margin-right: 14px;
-    }
-
+        .button-menu button:hover{
+            border: 1px solid var(--gray-border);
+        }

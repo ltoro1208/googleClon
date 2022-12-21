@@ -1,44 +1,50 @@
 html{
     background-color: #202124;
     font-family: Arial, sans-serif;
-    color: whitesmoke;
     margin: 0;
     box-sizing: border-box;
 }
 body{
     --black: #202124;
     --gray: #303134;
-    --white: whitesmoke;
+    --white: #e2e2e3;
+    --gray-border: #5f6368;
+    --black-footer:#171717;
+    --sm: 13px;
+    --md: 14px;
+    --lg: 15px;
 }
 .footer{
     display: grid;
-    grid-template-columns: 100%;
     grid-template-rows: 1fr 1fr;
-    background-color: var(--black);
-    align-content: flex-end;
+    background-color: var(--black-footer);
+    color: var(--white);
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    padding: 0;
 }
 .footer-top{
     display: flex;
     align-items: center;
-    width: 100%;
-    border-bottom: 1px solid var(--gray);
-    margin-left: 40px;
+    justify-content: flex-start;
+    border-bottom: 1px solid var(--gray-border);
+    padding: 15px 30px;
 }
-
-
 .footer-bottom{
     display: grid;
-    grid-template-columns: 50% 50%;
-    width: 100%;
-    height: auto;
-
+    grid-template-columns: 1fr 1fr;
+    height: 46px;
 }
-    .footer-bottom-left ul{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 3fr;
-    justify-content: stretch;
-    width: 100%;
-    list-style: none;
+    .footer-bottom-left{
+        display: flex;  
+        align-items: center;
+        padding-left: 15px;
+    }
+   .footer-bottom-left a{
+        text-decoration: none;
+        color: var(--white);
+        padding: 15px 15px;
     
     }
     .footer-bottom-rigth{
@@ -50,4 +56,7 @@ body{
             color: var(--white);
             margin-right: 50px;
             text-decoration: none;
+        }
+        .footer-bottom-rigth a:hover, .footer-bottom-left a:hover{
+            text-decoration: underline 1px solid;
         }
