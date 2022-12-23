@@ -146,6 +146,7 @@ body{
     color: var(--font-footer);
     width: 100%;
     position: absolute;
+    right: 0px;
     bottom: 0px;
     padding: 0;
 }
