@@ -59,6 +59,9 @@ body{
             background-color: var(--gray);
             border-radius: 50%;
         }
+            .user-menu-profile .icon-camera:hover{
+                background-color: var(--gray-border);
+            }
     .user-menu-profile div:first-of-type{
         padding: 15px 0px 0px 0px;
     }
@@ -74,6 +77,9 @@ body{
         width: 125px;
         text-align: center;
     }
+        .user-menu-profile span:hover{
+            background-color: var(--gray-border);
+        }
 .add-acount-menu{
     display: grid;
     width: 100%;
@@ -84,6 +90,9 @@ body{
     padding: 12px 0px;
     border-bottom: 1px solid var(--gray-border);
 }
+    .add-acount-menu:hover{
+        background-color: var(--gray-border);
+    }
     .add-acount-menu img{
         width: 28px;
         height: 28px;
@@ -111,12 +120,21 @@ body{
         border: 1px solid var(--gray-border);
         border-radius: 5px;
     }
+    button.close-user-menu:hover{
+        background-color: var(--gray-border);
+    }
 .politics-menu{
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: var(--sx);
 }
+    .politics-menu p:first-of-type:hover{
+        background-color: var(--gray-border);
+    }
+    .politics-menu p:last-of-type:hover{
+        background-color: var(--gray-border);
+    }
     .politics-menu img{
         width: 4px;
         height: 4px;

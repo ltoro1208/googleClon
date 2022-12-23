@@ -13,6 +13,7 @@ body{
     --gray-border: #5f6368;
     --black-footer:#171717;
     --backg-pref-menu: #202124;
+    --sx: 12px;
     --sm: 13px;
     --md: 14px;
     --lg: 15px;
@@ -67,6 +68,11 @@ body{
         height: 32px;
         border-radius: 50%;
         padding: 0;
+        cursor: pointer;
+    }
+    .shadow{
+        background-color: var(--gray);
+        border-radius: 50%;
     }
 /*---MAIN-----------------------------------------------------------*/
 .main-container{
@@ -232,3 +238,133 @@ body{
 .inactive{
     display: none;
 }
+
+/*---USER-OPTIONS-MENU-------------------------------------------*/
+.user-option-menu{
+    position: absolute;
+    top: 60px;
+    right: 20px;
+}
+
+.user-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 400px;
+    background-color: var(--gray);
+    color: var(--white);
+    border-radius: 0px 0px 5px 5px;
+    box-shadow: 2px 2px 5px 2px var(--black-footer) ;
+}
+    .user-menu-profile{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: var(--sm);
+        font-weight: bold;
+        margin-top: 10px;
+        border-bottom: 1px solid var(--gray-border);
+    }
+    .user-menu-profile img:first-of-type{
+        object-fit: contain;
+        border-radius: 50%;
+    }
+        .user-menu-profile .profile-photo{
+            width: 70px;
+            height: 70px;
+        }
+        .user-menu-profile .icon-camera{
+            position: absolute;
+            top: 75px;
+            right: 110px;
+            padding: 2px;
+            width: 12px;
+            height: 12px;
+            background-color: var(--gray);
+            border-radius: 50%;
+        }
+            .user-menu-profile .icon-camera:hover{
+                background-color: var(--gray-border);
+            }
+    .user-menu-profile div:first-of-type{
+        padding: 15px 0px 0px 0px;
+    }
+    .user-menu-profile div:last-of-type{
+        padding: 5px 0 0 0;
+        font-weight: lighter;
+    }
+    .user-menu-profile span{
+        margin: 20px 0;
+        padding: 8px 50px;
+        border: 1px solid var(--gray-border);
+        border-radius: 24px;
+        width: 125px;
+        text-align: center;
+    }
+        .user-menu-profile span:hover{
+            background-color: var(--gray-border);
+        }
+.add-acount-menu{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 3fr;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--sm);
+    padding: 12px 0px;
+    border-bottom: 1px solid var(--gray-border);
+}
+    .add-acount-menu:hover{
+        background-color: var(--gray-border);
+    }
+    .add-acount-menu img{
+        width: 28px;
+        height: 28px;
+        justify-self: flex-end;
+        padding-right: 12px;
+    }
+    .add-acount-menu p{
+        width: 150px;
+        margin: 0;
+    }
+.button-close-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    border-bottom: 1px solid var(--gray-border);
+}
+    button.close-user-menu{
+        width: 80px;
+        height: 40px;
+        color: var(--white);
+        font-weight: bold;
+        background-color: var(--gray);
+        border: 1px solid var(--gray-border);
+        border-radius: 5px;
+    }
+    button.close-user-menu:hover{
+        background-color: var(--gray-border);
+    }
+.politics-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--sx);
+}
+    .politics-menu p:first-of-type:hover{
+        background-color: var(--gray-border);
+    }
+    .politics-menu p:last-of-type:hover{
+        background-color: var(--gray-border);
+    }
+    .politics-menu img{
+        width: 4px;
+        height: 4px;
+        margin: 0 12px;
+    }
